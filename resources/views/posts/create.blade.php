@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
 @section('titulo')
-    Crea una nueva Publicación
+    Crea una nueva Publicaciónl
 @endsection
 
 @section('contenido')
     <div class="md:flex md:items-center">
         <div class="md:w-1/2 px-10">
-            imagen aquí
+            <form
+                id="dropzone"
+                class="dropzone border-dashed border-2 w-full h-96 rounded flex flex-col justify-center items-center"
+            >
+            </form>
         </div>
         <div class="md:w-1/2 p-10 bg-white rounded-lg shadow-lg mt-10 md:mt-0">
             <form action="{{ route('register')}}" method="POST" novalidate>
